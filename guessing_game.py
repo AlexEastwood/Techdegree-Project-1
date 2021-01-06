@@ -21,6 +21,10 @@ def start_game():
         random_number = random.randint(1, 10)
         
         print("Welcome to the guessing game!")
+        if high_score == 11:
+            print("There's no High Score yet.")
+        else:
+            print("The High Score is: %i" % high_score)
         
         guess = guess_number()
         
@@ -47,7 +51,6 @@ def start_game():
         while True:
             yes_no = input("Would you like to play again? Y/N\n")
             if yes_no.upper() == "Y":
-                print("The High Score is: %i" % high_score)
                 break
             elif yes_no.upper() == "N":
                 print("Goodbye")
